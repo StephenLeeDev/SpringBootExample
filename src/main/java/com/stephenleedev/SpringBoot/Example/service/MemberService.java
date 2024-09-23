@@ -2,15 +2,18 @@ package com.stephenleedev.SpringBoot.Example.service;
 
 import com.stephenleedev.SpringBoot.Example.domain.Member;
 import com.stephenleedev.SpringBoot.Example.repository.MemberRepository;
-import com.stephenleedev.SpringBoot.Example.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     MemberRepository repository;
 
+    @Autowired
     public MemberService(MemberRepository repository) {
         this.repository = repository;
     }
