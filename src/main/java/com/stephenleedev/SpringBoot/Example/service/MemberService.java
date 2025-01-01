@@ -2,10 +2,12 @@ package com.stephenleedev.SpringBoot.Example.service;
 
 import com.stephenleedev.SpringBoot.Example.domain.Member;
 import com.stephenleedev.SpringBoot.Example.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
 
     MemberRepository repository;
