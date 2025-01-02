@@ -12,10 +12,10 @@ public class MemoryMemberRepositoryTest {
 
     MemberRepository repository = new MemoryMemberRepository();
 
-    @AfterEach
-    public void afterEach() {
-        repository.clearStore();
-    }
+//    @AfterEach
+//    public void afterEach() {
+//        repository.clearStore();
+//    }
 
     @Test
     public void save() {

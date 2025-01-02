@@ -1,17 +1,16 @@
 package com.stephenleedev.SpringBoot.Example.repository;
 
 import com.stephenleedev.SpringBoot.Example.domain.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
 import java.util.Optional;
 
-public interface MemberRepository {
+public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository {
 
-    Member save(Member member);
-    Optional<Member> findById(Long id);
+    @Override
     Optional<Member> findByName(String name);
+
+//    @Override
 //    Optional<Member> findByNameAndId(String name, Long id);
-    List<Member> findAll();
-//    void clearStore();
 
 }

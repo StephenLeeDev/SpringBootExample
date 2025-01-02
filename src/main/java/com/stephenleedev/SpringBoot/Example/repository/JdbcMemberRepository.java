@@ -133,10 +133,10 @@ public class JdbcMemberRepository implements MemberRepository {
         }
     }
 
-    @Override
-    public void clearStore() {
-        // This method is not implemented
-    }
+//    @Override
+//    public void clearStore() {
+//        // This method is not implemented
+//    }
 
     // Helper method to get a database connection
     private Connection getConnection() {
